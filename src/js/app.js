@@ -1,11 +1,5 @@
 // TODO: write your code here
-import sum from './basic';
-
-import GameSavingLoader from './GameSavingLoader'
-
-console.log('worked');
-
-console.log(sum([1, 2]));
+import GameSavingLoader, {GameSavingLoaderClear} from './GameSavingLoader'
 
 (async () => {
     try {
@@ -15,3 +9,10 @@ console.log(sum([1, 2]));
         console.log(e)
     }
   })();
+  
+
+GameSavingLoaderClear.load().then(saving => {
+    console.log(saving)
+}, error => {
+    console.log(error)
+})

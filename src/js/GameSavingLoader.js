@@ -12,4 +12,10 @@ export default class GameSavingLoader {
     }
 }
 
-
+export class GameSavingLoaderClear {
+    static load() {
+        return read()
+        .then(response => json(response))
+        .catch(error => error)
+    }
+}
